@@ -1,15 +1,32 @@
-.background_img{
-    background-image: url(walter-pyramid2.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh
+.flex-container{
+    display: flex;
+}
 
+.flex-container div{
+    text-indent: 5px;
+}
+
+.flex-container a {
+    color: #0067b8;
+    background-color: transparent;
+    text-decoration: none;
+    box-sizing: border-box;
+    white-space: nowrap;
+}
+
+.container b {
+    text-indent: 5px;
+    color: #0067b8;
+    background-color: transparent;
+    text-decoration: none;
+    white-space: nowrap;
 }
 
 .login-form{
     background-color: #fff;
     padding: 10px;
-    width:400px;
+    width:350px;
+    height: 500px;
 }
 
 .flex-input{
@@ -18,24 +35,30 @@
     margin-bottom: 10px;
 }
 
-
-
 .container{
-    background-color: rgb(0, 0, 0);
+    font-family: "Segoe UI Webfont",-apple-system,"Helvetica Neue","Lucida Grande","Roboto","Ebrima","Nirmala UI","Gadugi","Segoe Xbox Symbol","Segoe UI Symbol","Meiryo UI","Khmer UI","Tunga","Lao UI","Raavi","Iskoola Pota","Latha","Leelawadee","Microsoft YaHei UI","Microsoft JhengHei UI","Malgun Gothic","Estrangelo Edessa","Microsoft Himalaya","Microsoft New Tai Lue","Microsoft PhagsPa","Microsoft Tai Le","Microsoft Yi Baiti","Mongolian Baiti","MV Boli","Myanmar Text","Cambria Math";
+    background-image: url(walter-pyramid2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    font-weight: 400;
+    font-size: .9375rem;
+    line-height: 1.25rem;
     display: flex;
     justify-content: center;
-    height: 700px;
     align-items: center;
+
 }
 
 label{
     flex-basis: 130px;
     margin-top: 10px;
-    font-size: 20ox;
+    font-size: 20px;
 }
 
 input[type="button"]{
-    width: 100%;
+    align-items: right;
+    width: 40%;
     font-size: 20px;
     padding: 10px;
     background-color: #0067b8;
@@ -46,5 +69,16 @@ input[type="button"]{
 input[type="button"]:hover{
     cursor: pointer;
     background-color: #005da6;
+
+}
+
+@media screen and (max-width: 480px) {
+    .flex-input{
+        flex-direction: column;
+    }
+
+    label {
+        flex-basis: 0;
+    }
 
 }
