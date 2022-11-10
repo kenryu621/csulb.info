@@ -50,6 +50,11 @@ body {
     background-color: #fff;
 }
 
+form {
+    display: block;
+    margin-top: 0em;
+}
+
 body.cb {
     color: #1b1b1b;
     text-align: left;
@@ -530,4 +535,93 @@ div.footerNode {
     vertical-align: top;
     font-size: 16px;
     font-weight: 600;
+}
+
+@media (max-width:600px),
+(max-height:366px) {
+
+    .background,
+    .background>div,
+    .background-image-holder,
+    .background-image {
+        display: none
+    }
+
+    .middle {
+        vertical-align: top;
+    }
+
+    .sign-in-box.has-popup {
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    .fade-in-lightbox {
+        animation: fadeIn .3s ease-in;
+    }
+
+    .sign-in-box {
+        padding: 24px;
+        margin-top: 0;
+        width: 100vw;
+        box-shadow: none;
+        border: none;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        max-width: 440px;
+        background-color: #fff;
+        min-width: 320px;
+        min-height: 338px;
+        overflow: hidden;
+    }
+
+    .promoted-fed-cred-box {
+        margin-top: 0;
+        margin-bottom: 88px;
+        width: 100vw;
+        padding: 0 24px;
+    }
+
+    .move-buttons {
+        bottom: auto;
+    }
+
+    .boilerplate-text {
+        padding: 20px;
+        margin: 76px 0 0 0;
+    }
+
+    .promoted-fed-cred-content {
+        box-shadow: none;
+        padding-left: 24px;
+        padding-right: 24px;
+        border: 1px solid rgba(0, 0, 0, 0.4);
+    }
+
+    .row.tile {
+        margin-left: -24px;
+        margin-right: -24px;
+    }
+
+    .row.tile .table {
+        padding: 12px 24px;
+    }
+
+    .footer,
+    .footer.has-background {
+        background-color: #fff;
+        filter: none;
+    }
+
+    div.footerNode {
+        float: left;
+        margin: 0 24px;
+    }
+
+    .footer-content.footer-item,
+    .footer-content.footer-item.has-background,
+    .footer-content.footer-item.debug-item.has-background {
+        color: #747474;
+    }
 }
