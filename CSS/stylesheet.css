@@ -185,7 +185,7 @@ img {
     border: 0;
 }
 
-html[dir=ltr].animate.slide-in-next,
+/* html[dir=ltr].animate.slide-in-next,
 html[dir=ltr].animate.slide-in-back {
     animation-name: show-from-right;
 }
@@ -195,7 +195,7 @@ html[dir=ltr].animate.slide-in-back {
     animation-timing-function: cubic-bezier(.5, 0, .5, 1);
     animation-fill-mode: both;
     transition-property: left;
-}
+} */
 
 .pagination-view {
     position: relative;
@@ -311,6 +311,15 @@ input {
     border-image: initial;
 }
 
+.input.text-box.has-error {
+    border-color: #e81123;
+}
+
+.error {
+    display: none;
+    color: #e81123;
+}
+
 .moveOffScreen {
     position: fixed;
     bottom: 0;
@@ -319,6 +328,52 @@ input {
     width: 0;
     overflow: hidden;
     opacity: 0;
+}
+
+.identityBanner {
+    height: 24px;
+    background-color: #fff;
+    margin-top: 16px;
+    margin-bottom: -4px;
+}
+
+.backButton {
+    min-height: 24px;
+    width: 24px;
+    min-width: 24px;
+    float: left;
+    padding: 0;
+    background-color: #fff;
+    border-width: 0;
+    border-radius: 12px;
+    margin-right: 2px
+}
+
+.backButton:hover {
+    background-color: #e6e6e6;
+    background-color: rgba(0, 0, 0, 0.1)
+}
+
+.backButton:hover:focus {
+    background-color: #ccc;
+    background-color: rgba(0, 0, 0, 0.2)
+}
+
+.backButton:active {
+    background-color: #b3b3b3;
+    background-color: rgba(0, 0, 0, 0.3)
+}
+
+.backButton:focus {
+    background-color: #e6e6e6;
+    background-color: rgba(0, 0, 0, 0.1)
+}
+
+.identity {
+    line-height: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .boilerplate-text {
@@ -401,6 +456,26 @@ input[type="submit"] {
     cursor: pointer;
 }
 
+#idSIButton {
+    margin-top: 0;
+    margin-bottom: 0;
+    min-height: 32px;
+    border: none;
+    min-width: 108px;
+    line-height: normal;
+    padding: 4px 12px 4px 12px;
+    position: relative;
+    max-width: 100%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: middle;
+    text-overflow: ellipsis;
+    touch-action: manipulation;
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+
 .promoted-fed-cred-box {
     margin-left: auto;
     margin-right: auto;
@@ -411,6 +486,11 @@ input[type="submit"] {
     line-height: 16px;
     min-width: 320px;
     padding: 0;
+    display: none;
+}
+
+.showBox {
+    display: block;
 }
 
 .promoted-fed-cred-box>* {
@@ -562,6 +642,10 @@ div.footerNode {
 
     .fade-in-lightbox {
         animation: fadeIn .3s ease-in;
+        -webkit-animation: fadeIn .3s ease-in;
+        -moz-animation: fadeIn .3s ease-in;
+        -ms-animation: fadeIn .3s ease-in;
+        -o-animation: fadeIn .3s ease-in;
     }
 
     .sign-in-box {
@@ -578,6 +662,10 @@ div.footerNode {
         min-width: 320px;
         min-height: 338px;
         overflow: hidden;
+    }
+
+    .col-md-24 {
+        float: left;
     }
 
     .promoted-fed-cred-box {
@@ -627,5 +715,359 @@ div.footerNode {
     .footer-content.footer-item.has-background,
     .footer-content.footer-item.debug-item.has-background {
         color: #747474;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@-moz-keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.fadeIn {
+    -webkit-animation: fadeIn 1s;
+    -moz-animation: fadeIn 1s;
+    -o-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+
+.backgroundImage,
+.background-image {
+    -webkit-animation: fadeIn 1s;
+    -moz-animation: fadeIn 1s;
+    -o-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+
+.animate {
+    animation-duration: .25s;
+    -webkit-animation-duration: .25s;
+    -moz-animation-duration: .25s;
+    -ms-animation-duration: .25s;
+    -o-animation-duration: .25s;
+    animation-timing-function: cubic-bezier(.5, 0, .5, 1);
+    -webkit-animation-timing-function: cubic-bezier(.5, 0, .5, 1);
+    -moz-animation-timing-function: cubic-bezier(.5, 0, .5, 1);
+    -ms-animation-timing-function: cubic-bezier(.5, 0, .5, 1);
+    -o-animation-timing-function: cubic-bezier(.5, 0, .5, 1);
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -ms-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    transition-property: left;
+    -webkit-transition-property: left;
+    -moz-transition-property: left;
+    -ms-transition-property: left;
+    -o-transition-property: left
+}
+
+html[dir=ltr] .animate.slide-out-next,
+html[dir=rtl] .animate.slide-out-back {
+    animation-name: hide-to-left;
+    -webkit-animation-name: hide-to-left;
+    -moz-animation-name: hide-to-left;
+    -ms-animation-name: hide-to-left;
+    -o-animation-name: hide-to-left
+}
+
+html[dir=ltr] .animate.slide-in-next,
+html[dir=rtl] .animate.slide-in-back {
+    animation-name: show-from-right;
+    -webkit-animation-name: show-from-right;
+    -moz-animation-name: show-from-right;
+    -ms-animation-name: show-from-right;
+    -o-animation-name: show-from-right
+}
+
+html[dir=ltr] .animate.slide-out-back,
+html[dir=rtl] .animate.slide-out-next {
+    animation-name: hide-to-right;
+    -webkit-animation-name: hide-to-right;
+    -moz-animation-name: hide-to-right;
+    -ms-animation-name: hide-to-right;
+    -o-animation-name: hide-to-right
+}
+
+html[dir=ltr] .animate.slide-in-back,
+html[dir=rtl] .animate.slide-in-next {
+    animation-name: show-from-left;
+    -webkit-animation-name: show-from-left;
+    -moz-animation-name: show-from-left;
+    -ms-animation-name: show-from-left;
+    -o-animation-name: show-from-left
+}
+
+@keyframes hide-to-left {
+    from {
+        left: 0;
+        opacity: 1
+    }
+
+    to {
+        left: -200px;
+        opacity: 0
+    }
+}
+
+@keyframes show-from-right {
+    from {
+        left: 200px;
+        opacity: 0
+    }
+
+    to {
+        left: 0;
+        opacity: 1
+    }
+}
+
+@keyframes hide-to-right {
+    from {
+        left: 0;
+        opacity: 1
+    }
+
+    to {
+        left: 200px;
+        opacity: 0
+    }
+}
+
+@keyframes show-from-left {
+    from {
+        left: -200px;
+        opacity: 0
+    }
+
+    to {
+        left: 0;
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes hide-to-left {
+    from {
+        left: 0;
+        opacity: 1
+    }
+
+    to {
+        left: -200px;
+        opacity: 0
+    }
+}
+
+@-webkit-keyframes show-from-right {
+    from {
+        left: 200px;
+        opacity: 0
+    }
+
+    to {
+        left: 0;
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes hide-to-right {
+    from {
+        left: 0;
+        opacity: 1
+    }
+
+    to {
+        left: 200px;
+        opacity: 0
+    }
+}
+
+@-webkit-keyframes show-from-left {
+    from {
+        left: -200px;
+        opacity: 0
+    }
+
+    to {
+        left: 0;
+        opacity: 1
+    }
+}
+
+@-moz-keyframes hide-to-left {
+    from {
+        left: 0;
+        opacity: 1
+    }
+
+    to {
+        left: -200px;
+        opacity: 0
+    }
+}
+
+@-moz-keyframes show-from-right {
+    from {
+        left: 200px;
+        opacity: 0
+    }
+
+    to {
+        left: 0;
+        opacity: 1
+    }
+}
+
+@-moz-keyframes hide-to-right {
+    from {
+        left: 0;
+        opacity: 1
+    }
+
+    to {
+        left: 200px;
+        opacity: 0
+    }
+}
+
+@-moz-keyframes show-from-left {
+    from {
+        left: -200px;
+        opacity: 0
+    }
+
+    to {
+        left: 0;
+        opacity: 1
+    }
+}
+
+@-ms-keyframes hide-to-left {
+    from {
+        left: 0;
+        opacity: 1
+    }
+
+    to {
+        left: -200px;
+        opacity: 0
+    }
+}
+
+@-ms-keyframes show-from-right {
+    from {
+        left: 200px;
+        opacity: 0
+    }
+
+    to {
+        left: 0;
+        opacity: 1
+    }
+}
+
+@-ms-keyframes hide-to-right {
+    from {
+        left: 0;
+        opacity: 1
+    }
+
+    to {
+        left: 200px;
+        opacity: 0
+    }
+}
+
+@-ms-keyframes show-from-left {
+    from {
+        left: -200px;
+        opacity: 0
+    }
+
+    to {
+        left: 0;
+        opacity: 1
+    }
+}
+
+@-o-keyframes hide-to-left {
+    from {
+        left: 0;
+        opacity: 1
+    }
+
+    to {
+        left: -200px;
+        opacity: 0
+    }
+}
+
+@-o-keyframes show-from-right {
+    from {
+        left: 200px;
+        opacity: 0
+    }
+
+    to {
+        left: 0;
+        opacity: 1
+    }
+}
+
+@-o-keyframes hide-to-right {
+    from {
+        left: 0;
+        opacity: 1
+    }
+
+    to {
+        left: 200px;
+        opacity: 0
+    }
+}
+
+@-o-keyframes show-from-left {
+    from {
+        left: -200px;
+        opacity: 0
+    }
+
+    to {
+        left: 0;
+        opacity: 1
     }
 }

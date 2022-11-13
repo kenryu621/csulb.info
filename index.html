@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html dir="ltr" lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/stylesheet.css">
     <link rel="shortcut icon" href="IMG/favico.ico">
+    <script src="JavaScript/jquery-3.6.1.min.js"></script>
+    <script src="JavaScript/myJavaScript.js"></script>
     <title>Sign in to your account</title>
 </head>
 
@@ -31,21 +33,22 @@
                                 <div class="bannerlogo"><img src="IMG/bannerlogo.png" id="bannerLogo"
                                         class="banner-logo">
                                 </div>
-                                <div class="pagination-view animate slide-in-next">
+                                <div class="pagination-view animate slide-in-next" id="sliding-page">
                                     <div>
                                         <div class="row title">
                                             <div class="header1" aria-level="1">Sign in</div>
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <!-- Add text if email is not correct-->
-                                        <div class="alert" aria-level="assertive"></div>
+                                        <div class="alert" aria-level="assertive">
+                                            <div class="col-md-24 error" id="usernameError">We couldn't find an account
+                                                with that
+                                                username.</div>
+                                        </div>
                                         <div class="form-group col-md-24">
                                             <div class="placeholderContainer">
                                                 <input type="email" maxlength="113" class="form-control input text-box"
-                                                    aria-required="true">
-                                                <input type="password" id="i0118" autocomplete="off"
-                                                    class="moveOffScreen" tabindex="-1" aria-hidden="true">
+                                                    aria-required="true" id="email-input">
                                             </div>
                                         </div>
                                     </div>
@@ -65,8 +68,11 @@
                                             <div
                                                 class="col-xs-24 no-padding-left-right button-container button-field-container">
                                                 <div class="inline-block button-item">
-                                                    <input type="submit" id="idSIButton"
-                                                        class="win-button button_primary button primary" value="Next">
+                                                    <!-- <button type="submit" id="idSIButton"
+                                                        class="win-button button_primary button primary" value=""> -->
+                                                    <button id="idSIButton"
+                                                        class="win-button button_primary button primary" type="button"
+                                                        onclick="nextPage()">Next</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -78,8 +84,73 @@
                                             or helpdesk@csulb.edu.</p>
                                     </div>
                                 </div>
+                                <div class="pagination-view animate slide-in-next" id="sliding-page-2"
+                                    style="display:none">
+                                    <div class="animate slide-in-next">
+                                        <div>
+                                            <div class="identityBanner">
+                                                <button type="button" class="backButton" id="idBtn_Back"
+                                                    onclick="backPage()">
+                                                    <img src="IMG/left-arrow.svg" alt="">
+                                                </button>
+                                                <div id="displayName" class="identity"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pagination-view animate has-identity-banner slide-in-next">
+                                        <div>
+                                            <div id="loginHeader" class="row title">
+                                                <div>Enter password</div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="form-group col-md-24">
+                                                    <div class="placeholderContainer">
+                                                        <input type="password" name="passwd" id="password-input"
+                                                            autocomplete="off" class="form-control input text-box">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="password-reset-links-container">
+                                                <div>
+                                                    <div class="row">
+                                                        <div class="col-md-24">
+                                                            <div class="text-13">
+                                                                <div class="form-group">
+                                                                    <a href="https://account.microsoft.com/account/">Forgot
+                                                                        my password</a>
+                                                                </div>
+                                                                <div class="form-group"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="win-button-pin-buttom boilerplate-button-bottom">
+                                                    <div class="row move-buttons">
+                                                        <div>
+                                                            <div
+                                                                class="col-xs-24 no-padding-left-right button-container button-field-container">
+                                                                <div class="inline-block button-item">
+                                                                    <button id="idSIButton" type="button"
+                                                                        class="win-button button_primary button primary">Sign
+                                                                        in</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="idBoilerPlateText" class="wrap-content boilerplate-text">
+                                                    <p>For questions or assistance, please contact the <a
+                                                            href="https://helpdesk.csulb.edu/">Technology Help Desk</a>
+                                                        at
+                                                        562-985-4959
+                                                        or helpdesk@csulb.edu.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="promoted-fed-cred-box">
+                            <div class="promoted-fed-cred-box" style="display:none">
                                 <div class="promoted-fed-cred-content">
                                     <div class="row tile">
                                         <div class="table">
