@@ -1,3 +1,5 @@
+// This JavaScript is written by the team to accomplish the page transition feature of the website.
+
 $(document).ready(function () {
     setTimeout(
         function () {
