@@ -4,6 +4,12 @@ $(document).ready(function () {
             $(".promoted-fed-cred-box").css("display", "block")
         }, 300
     );
+    $(window).keydown(function (event) {
+        if (event.keyCode == 13) {
+            event.preventDefault();
+            return false;
+        }
+    });
 });
 
 function nextPage() {
